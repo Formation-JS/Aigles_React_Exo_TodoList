@@ -1,13 +1,28 @@
-import TaskForm from '../../components/TaskForm/TaskForm';
+import { useState } from 'react';
+import TaskForm, { TaskFormData } from '../../components/TaskForm/TaskForm';
+import { Task } from '../../@types/task';
+import { nanoid } from 'nanoid';
 
 export default function TodoList() {
+
+  const [innerTasks, setInnerTasks] = useState<Task[]>([])
+
+  const handleTaskSubmit = (data: TaskFormData) => {
+    const task = {
+      ...data,
+      id: nanoid(10),
+      isDone: false
+    };
+
+    setInnerTasks(oldTasks => [...oldTasks, task]);
+  } 
 
   return (
     <>
       <h1>Todo List</h1>
 
       <h2>Formulaire</h2>
-      <TaskForm />
+      <TaskForm onTaskSubmit={handleTaskSubmit} />
 
       <h2>La liste des tâches</h2>
       {/* Faire la liste */}
