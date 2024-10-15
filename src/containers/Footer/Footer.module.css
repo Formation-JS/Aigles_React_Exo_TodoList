@@ -1,0 +1,10 @@
+.footer {
+  border-top: 0.1ch solid black;
+  padding: 0.5ch;
+  font-size: 1.2em;
+
+  p {
+    margin: 0;
+    text-align: center;
+  }
+}
