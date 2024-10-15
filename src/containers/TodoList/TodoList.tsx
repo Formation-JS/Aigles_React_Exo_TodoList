@@ -1,3 +1,4 @@
+import TaskForm from '../../components/TaskForm/TaskForm';
 
 export default function TodoList() {
 
@@ -6,7 +7,7 @@ export default function TodoList() {
       <h1>Todo List</h1>
 
       <h2>Formulaire</h2>
-      {/* Faire le formulaire :o */}
+      <TaskForm />
 
       <h2>La liste des tâches</h2>
       {/* Faire la liste */}

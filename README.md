@@ -8,6 +8,10 @@ pnpm i
 pnpm dev
 ```
 - Cleanup
+- Ajout des librairies pour les formulaires
+´´´
+pnpm i react-hook-form @hookform/resolvers yup
+´´´
 
 ## Composant
 - Header
