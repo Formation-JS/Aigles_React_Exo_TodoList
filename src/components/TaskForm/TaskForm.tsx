@@ -1,6 +1,7 @@
 import { useId } from 'react';
 import { useForm } from 'react-hook-form';
 import { TaskFormData } from '../../@types/task';
+import style from './TaskForm.module.css';
 
 //! Librairie ajouter pour la gestion du formulaire
 // pnpm i react-hook-form @hookform/resolvers yup
@@ -33,7 +34,7 @@ export default function TaskForm({
   };
 
   return (
-    <form onSubmit={handleSubmit(handleTaskSubmit)}>
+    <form className={style['task-form']} onSubmit={handleSubmit(handleTaskSubmit)}>
       <div>
         <label htmlFor={inputId + 'name'}>Nom : </label>
         <input type="text" id={inputId + 'name'}  {...register('name')} />
