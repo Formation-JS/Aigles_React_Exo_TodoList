@@ -2,6 +2,7 @@ import { useState } from 'react';
 import TaskForm from '../../components/TaskForm/TaskForm';
 import { Task, TaskFormData } from '../../@types/task';
 import { nanoid } from 'nanoid';
+import TaskList from '../../components/TaskList/TaskList';
 
 export default function TodoList() {
 
@@ -25,7 +26,7 @@ export default function TodoList() {
       <TaskForm onTaskSubmit={handleTaskSubmit} />
 
       <h2>La liste des tâches</h2>
-      {/* Faire la liste */}
+      <TaskList tasks={innerTasks} />
     </>
   );
 }

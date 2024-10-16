@@ -1,0 +1,56 @@
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1ch;
+}
+
+.task-item {
+  background-color: #FEFEFE;
+  border-radius: 1em;
+  box-shadow: gray 0.5ch 0.5ch 0.5ch;
+  padding: 1ch;
+
+  display: grid;
+  grid-template-areas: 
+    "a c"
+    "b c";
+  grid-template-columns: 1fr 8em;
+  grid-template-rows: 2em 1fr;
+
+  p {
+    margin: 0;
+  }
+
+  p:nth-child(1) {
+    grid-area: a;
+    font-size: 1.3em;
+    span {
+      color: crimson;
+      font-weight: 600;
+    }
+  }
+  p:nth-child(2) {
+    grid-area: b;
+  }
+  div {
+    grid-area: c;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5ch;
+    gap: 0.5ch;
+    
+    button {
+      border: 0.1ch solid lightgray;
+    }
+  }
+}
+
+.task-done {
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 105, 180, 0.5),
+    rgba(128, 255, 0, 0.5) 2em,
+    rgba(128, 255, 0, 0.5) 2em,
+    rgba(255, 105, 180, 0.5) 4em
+    );
+}
