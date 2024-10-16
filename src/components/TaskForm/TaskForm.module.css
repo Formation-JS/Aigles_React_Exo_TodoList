@@ -4,6 +4,10 @@
   width: 100%;
   gap: 0.5ch;
 
+  p {
+    margin: 0;
+  }
+
   div {
     display: flex;
     flex-direction: row;
@@ -19,4 +23,8 @@
       resize: none;
     }
   }
+}
+
+.error {
+  color: crimson;
 }
