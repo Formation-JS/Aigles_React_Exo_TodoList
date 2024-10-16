@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import TaskForm, { TaskFormData } from '../../components/TaskForm/TaskForm';
-import { Task } from '../../@types/task';
+import TaskForm from '../../components/TaskForm/TaskForm';
+import { Task, TaskFormData } from '../../@types/task';
 import { nanoid } from 'nanoid';
 
 export default function TodoList() {

@@ -1,15 +1,9 @@
 import { useId } from 'react';
 import { useForm } from 'react-hook-form';
+import { TaskFormData } from '../../@types/task';
 
 //! Librairie ajouter pour la gestion du formulaire
 // pnpm i react-hook-form @hookform/resolvers yup
-
-//! Définition des types pour la formulaire
-export type TaskFormData = {
-  name: string;
-  desc?: string;
-  priority: 'low' | 'normal' | 'urgent';
-};
 
 //! Définition du types des props du composant
 type TaskFormProps = {
